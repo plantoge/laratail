@@ -35,8 +35,8 @@
                                 {{ number_format($item->harga, 0, ',', '.') }}
                             </td>
                             <td class="text-right">
-                                <a wire:navigate href="{{ url('/produk/' . $item->id . '/edit') }}" class="btn btn-sm btn-primary">Ubah</a>
-                                <button onclick="confirmDelete({{ $item->id }})" class="btn btn-sm btn-warning">Hapus</button>
+                                <a wire:navigate href="{{ url('/produk/' . $item->produk_id . '/edit') }}" class="btn btn-sm btn-primary">Ubah</a>
+                                <button onclick="confirmDelete({{ $item->produk_id }})" class="btn btn-sm btn-warning">Hapus</button>
                             </td>
                         </tr>
                     @endforeach

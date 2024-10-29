@@ -12,9 +12,9 @@
                 </div>
                 <ul tabindex="0"
                     class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                    <li><a href="{{url('product')}}" wire:navigate>Product</a></li>
-                    <li><a href="{{url('transaksi')}}" wire:navigate>Transaction</a></li>
-                    <li><a href="{{url('invoice')}}" wire:navigate>Invoice</a></li>
+                    <li><a class="font-bold" href="{{url('product')}}" wire:navigate>Product</a></li>
+                    <li><a class="font-bold" href="{{url('transaksi')}}" wire:navigate>Transaction</a></li>
+                    <li><a class="font-bold" href="{{url('invoice')}}" wire:navigate>Invoice</a></li>
                     {{-- <li>
                         <a>Parent</a>
                         <ul class="p-2">
@@ -28,9 +28,9 @@
         </div>
         <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1">
-                <li><a href="{{url('produk')}}" wire:navigate>Produk</a></li>
-                <li><a href="{{url('transaksi')}}" wire:navigate>Transaksi</a></li>
-                <li><a href="{{url('invoice')}}" wire:navigate>Kwitansi</a></li>
+                <li><a class="font-bold" href="{{url('produk')}}" wire:navigate>Produk</a></li>
+                <li><a class="font-bold" href="{{url('transaksi')}}" wire:navigate>Transaksi</a></li>
+                <li><a class="font-bold" href="{{url('invoice')}}" wire:navigate>Kwitansi</a></li>
                 {{-- <li>
                     <details>
                         <summary>Parent</summary>

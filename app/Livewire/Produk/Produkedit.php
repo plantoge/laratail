@@ -10,7 +10,7 @@ class Produkedit extends Component
 {
     #[Title('Produk Edit')]
 
-    public $id;
+    public $produk_id;
     public $nama;
     public $harga;
 
@@ -19,7 +19,7 @@ class Produkedit extends Component
         $data = produk::find($id);
 
         if ($data) {
-            $this->id = $data->id;
+            $this->produk_id = $data->produk_id;
             $this->nama = $data->nama;
             $this->harga = $data->harga;
         }
@@ -32,9 +32,9 @@ class Produkedit extends Component
             'harga' => 'required',
         ]);
 
-        if($this->id) {
+        if($this->produk_id) {
 
-            $post = produk::find($this->id);
+            $post = produk::find($this->produk_id);
             
             if($post) {
                 $post->update([
