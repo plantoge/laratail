@@ -9,18 +9,18 @@
                 </p>
             </div>
             <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-                <form wire:submit.prevent="login" class="card-body">
+                <form wire:submit="attempt" class="card-body">
                     <div class="form-control">
                         <label class="label">
                             <span class="label-text">Email</span>
                         </label>
-                        <input type="email" name="email" placeholder="email" class="input input-bordered" required />
+                        <input type="email" wire:model="email" placeholder="email" class="input input-bordered" required />
                     </div>
                     <div class="form-control">
                         <label class="label">
                             <span class="label-text">Password</span>
                         </label>
-                        <input type="password" name="password" placeholder="password" class="input input-bordered" required />
+                        <input type="password" wire:model="password" placeholder="password" class="input input-bordered" required />
                         <label class="label">
                             <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
                         </label>

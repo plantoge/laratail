@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('transaksi', function (Blueprint $table) {
             $table->id('transaksi_id');
             $table->string('user_id');
+            $table->string('nomor_transaksi');
             $table->string('payment');
             $table->float('total_harga');
             $table->string('status')->default('pending');

@@ -58,7 +58,7 @@
                             <span class="badge">New</span>
                         </a>
                     </li>
-                    <li><a href="{{url('/login')}}" wire:navigate>Logout</a></li>
+                    <li><a href="{{url('/logout')}}" wire:navigate>Logout</a></li>
                 </ul>
             </div>
         </div>
