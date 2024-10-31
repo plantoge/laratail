@@ -15,6 +15,7 @@ class TransaksiIndex extends Component
     {
         $transaksi = Transaksi::join('transaksi_item as item', 'item.transaksi_id', '=', 'transaksi.transaksi_id', 'left')
             ->select('transaksi.*')
+            ->distinct()
             ->where('transaksi.nomor_transaksi', 'like', '%' . $this->search . '%')
             ->orwhere('transaksi.payment', 'like', '%' . $this->search . '%')
             ->orwhere('transaksi.total_harga', 'like', '%' . $this->search . '%')

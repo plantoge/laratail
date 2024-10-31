@@ -22,9 +22,9 @@
                         <th>No</th>
                         <th>Tanggal</th>
                         <th>Nomor Transaksi</th>
-                        <th>Status</th>
-                        <th>Cara Bayar</th>
                         <th class="text-right">Total Harga</th>
+                        <th>Cara Bayar</th>
+                        <th>Status</th>
                         <th class="text-center">Aksi</th>
                         <!-- Tambahkan kolom lainnya -->
                     </tr>
@@ -35,13 +35,13 @@
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $item->created_at }}</td>
                             <td>{{ $item->nomor_transaksi }}</td>
-                            <td>{{ $item->status }}</td>
-                            <td>{{ $item->payment }}</td>
                             <td class="text-right">
                                 {{ number_format($item->total_harga, 0, ',', '.') }}
                             </td>
+                            <td>{{ $item->payment }}</td>
+                            <td>{{ $item->status }}</td>
                             <td class="text-center">
-                                <a wire:navigate href="{{ url('/transaksi/' . $item->transaksi_id . '/edit') }}" class="btn btn-sm btn-primary">Detail</a>
+                                <a wire:navigate href="{{ url('/transaksi/' . $item->transaksi_id . '/detail') }}" class="btn btn-sm btn-primary">Detail</a>
                                 {{-- <button onclick="confirmDelete({{ $item->transaksi_id }})" class="btn btn-sm btn-warning">Hapus</button> --}}
                             </td>
                         </tr>
