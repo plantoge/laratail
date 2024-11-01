@@ -6,6 +6,8 @@ use App\Livewire\Produk\Produkcreate;
 use App\Livewire\Produk\Produkedit;
 use App\Livewire\Produk\Produkindex;
 use App\Livewire\Register;
+use App\Livewire\Tagihan\TagihanCreate;
+use App\Livewire\Tagihan\TagihanIndex;
 use App\Livewire\Transaksi\TransaksiCreate;
 use App\Livewire\Transaksi\TransaksiDetail;
 use App\Livewire\Transaksi\TransaksiIndex;
@@ -29,6 +31,8 @@ Route::group([
     Route::Get('transaksi', TransaksiIndex::class)->name('transaksi');
     Route::Get('transaksi/create', TransaksiCreate::class)->name('transaksi-create');
     Route::Get('transaksi/{id}/detail', TransaksiDetail::class)->name('transaksi-detail');
+    Route::Get('tagihan', TagihanIndex::class)->name('tagihan');
+    Route::Get('tagihan/create', TagihanCreate::class)->name('tagihan-create');
     
     Route::get('logout', function () {
         Auth::logout();

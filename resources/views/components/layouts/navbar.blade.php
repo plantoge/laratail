@@ -14,7 +14,7 @@
                     class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                     <li><a class="font-bold" href="{{url('product')}}" wire:navigate>Product</a></li>
                     <li><a class="font-bold" href="{{url('transaksi')}}" wire:navigate>Transaction</a></li>
-                    <li><a class="font-bold" href="{{url('invoice')}}" wire:navigate>Invoice</a></li>
+                    <li><a class="font-bold" href="{{url('tagihan')}}" wire:navigate>Tagihan</a></li>
                     {{-- <li>
                         <a>Parent</a>
                         <ul class="p-2">
@@ -30,7 +30,7 @@
             <ul class="menu menu-horizontal px-1">
                 <li><a class="font-bold" href="{{url('produk')}}" wire:navigate>Produk</a></li>
                 <li><a class="font-bold" href="{{url('transaksi')}}" wire:navigate>Transaksi</a></li>
-                <li><a class="font-bold" href="{{url('invoice')}}" wire:navigate>Kwitansi</a></li>
+                <li><a class="font-bold" href="{{url('tagihan')}}" wire:navigate>Tagihan</a></li>
                 {{-- <li>
                     <details>
                         <summary>Parent</summary>
