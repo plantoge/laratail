@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Tagihan;
 
+use App\Models\Kuitansi;
 use App\Models\Tagihan;
 use Livewire\Attributes\Title;
 use Livewire\Component;
@@ -10,6 +11,18 @@ class TagihanIndex extends Component
 {
     #[Title('Tagihan')]
     public $search;
+
+    public function destroy($id)
+    {
+        $tagihan = Tagihan::find($id);
+        $kuitansi = Kuitansi::find($tagihan->kuitansi_id);
+        $kuitansi->delete();
+        $tagihan->delete();
+
+        session()->flash('message', 'Tagihan berhasil di hapus');
+
+        return $this->redirect('/tagihan', navigate: true);
+    }
 
     public function render()
     {

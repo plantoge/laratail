@@ -42,7 +42,7 @@
                             <td>{{ $item->status }}</td>
                             <td class="text-center">
                                 <a wire:navigate href="{{ url('/transaksi/' . $item->transaksi_id . '/detail') }}" class="btn btn-sm btn-primary">Detail</a>
-                                {{-- <button onclick="confirmDelete({{ $item->transaksi_id }})" class="btn btn-sm btn-warning">Hapus</button> --}}
+                                <button onclick="confirmDelete({{ $item->transaksi_id }})" class="btn btn-sm btn-warning">Hapus</button>
                             </td>
                         </tr>
                     @endforeach

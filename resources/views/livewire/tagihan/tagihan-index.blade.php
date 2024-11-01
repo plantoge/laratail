@@ -39,7 +39,11 @@
                                 {{ number_format($item->jumlah, 0, ',', '.') }}
                             </td>
                             <td class="text-center">
-                                <a wire:navigate href="{{ url('/tagihan/' . $item->tagihan_id . '/detail') }}" class="btn btn-sm btn-primary">Detail</a>
+                                <a class="w-full btn btn-sm btn-warning">Berkas</a>
+                                <br>
+                                <a wire:navigate href="{{ url('/tagihan/' . $item->tagihan_id . '/detail') }}" class="w-full btn btn-sm btn-primary">Detail</a>
+                                <br>
+                                <button onclick="confirmDelete({{ $item->tagihan_id }})" class="w-full btn btn-sm btn-danger">Hapus</button>
                             </td>
                         </tr>
                     @endforeach
