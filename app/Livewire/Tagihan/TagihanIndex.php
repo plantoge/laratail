@@ -4,6 +4,7 @@ namespace App\Livewire\Tagihan;
 
 use App\Models\Kuitansi;
 use App\Models\Tagihan;
+use Barryvdh\DomPDF\Facade\PDF;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 

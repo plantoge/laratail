@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\TagihanController;
 use App\Livewire\Dashboard\DashboardIndex;
+use App\Livewire\Export\Tagihanpdf;
 use App\Livewire\Login;
 use App\Livewire\Produk\Produkcreate;
 use App\Livewire\Produk\Produkedit;
@@ -33,6 +35,7 @@ Route::group([
     Route::Get('transaksi/{id}/detail', TransaksiDetail::class)->name('transaksi-detail');
     Route::Get('tagihan', TagihanIndex::class)->name('tagihan');
     Route::Get('tagihan/create', TagihanCreate::class)->name('tagihan-create');
+    Route::Get('export-tagihan/{id}', [TagihanController::class, 'exportpdf'])->name('export-tagihan');
     
     Route::get('logout', function () {
         Auth::logout();
