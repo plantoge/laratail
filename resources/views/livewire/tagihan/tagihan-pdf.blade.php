@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Tagihan</title>
     <style>
         /* Tambahkan style untuk PDF jika perlu */
@@ -26,12 +27,12 @@
     <p>Detail Tagihan:</p>
     <table>
         <tr>
-            <th>Nama</th>
-            <th>Jumlah</th>
+            <th>Kepada</th>
+            <th>Dari</th>
         </tr>
         <tr>
-            <td>{{$tagihan->nama }}</td>
-            <td>{{$tagihan->jumlah }}</td>
+            <td>{{$tagihan->kepada }}</td>
+            <td>{{$tagihan->dari }}</td>
         </tr>
     </table>
 </body>

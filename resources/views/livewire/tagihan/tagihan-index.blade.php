@@ -39,7 +39,8 @@
                                 {{ number_format($item->jumlah, 0, ',', '.') }}
                             </td>
                             <td class="text-center">
-                                <a href="{{url('export-tagihan/' . $item->tagihan_id)}}" target="_blank" class="w-full btn btn-sm btn-warning">Berkas</a>
+                                {{-- <a href="{{url('export-tagihan/' . $item->tagihan_id)}}" target="_blank" class="w-full btn btn-sm btn-warning">Berkas</a> --}}
+                                <a wire:click="Exportpdf({{$item->tagihan_id}})" class="w-full btn btn-sm btn-warning">Berkas</a>
                                 <br>
                                 <a wire:navigate href="{{ url('/tagihan/' . $item->tagihan_id . '/detail') }}" class="w-full btn btn-sm btn-primary">Detail</a>
                                 <br>

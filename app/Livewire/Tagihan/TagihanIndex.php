@@ -13,6 +13,20 @@ class TagihanIndex extends Component
     #[Title('Tagihan')]
     public $search;
 
+    public function Exportpdf($id)
+    {
+        $tagihan = Tagihan::findOrFail($id);
+        $pdf = PDF::loadView('livewire.tagihan.tagihan-pdf', ['tagihan' => $tagihan]);
+        // $pdf = Pdf::loadHTML("<h1>Hello</h1>");
+        // //return $pdf->download('aaa.pdf');
+        return response()->streamDownload(function () use ($pdf) {
+            echo $pdf->stream();
+        }, 'tagihan_' . date('Y-m-d') . '.pdf');
+
+        // Download PDF
+        // return $pdf->download('tagihan_' . $id . '.pdf');
+    }
+
     public function destroy($id)
     {
         $tagihan = Tagihan::find($id);
