@@ -22,6 +22,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::Get('login', Login::class)->name('login');
 Route::Get('register', Register::class)->name('register');
+Route::Get('halaman-pdf', [TagihanController::class, 'exportpdf']);
 
 Route::group([
     'middleware' => ['auth']
