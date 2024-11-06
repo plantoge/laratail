@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Kuitansi extends Model
 {
@@ -18,4 +19,9 @@ class Kuitansi extends Model
         'nominal',
         'tujuan',
     ];
+
+    public function tagihans(): HasMany
+    {
+        return $this->hasMany(Tagihan::class, 'kuitansi_id', 'kuitansi_id');
+    }
 }

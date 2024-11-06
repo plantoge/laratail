@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Tagihan extends Model
 {
@@ -26,4 +27,10 @@ class Tagihan extends Model
         'npwp',
         'nomor_kuitansi',
     ];
+
+    public function kuitansi(): BelongsTo
+    {
+        return $this->belongsTo(Kuitansi::class, 'kuitansi_id', 'kuitansi_id');
+    }
+
 }

@@ -8,4 +8,5 @@ class Common
     {
         return 'Rp ' . number_format($number, 2, '.', ',');
     }
+
 }
