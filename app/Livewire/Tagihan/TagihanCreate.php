@@ -57,6 +57,7 @@ class TagihanCreate extends Component
             'kuitansi_id' => $kuitansi->kuitansi_id,
         ]);
 
+        session()->flash('message', 'Tagihan berhasil di simpan');
         return $this->redirect('/tagihan', navigate: true);
     }
 

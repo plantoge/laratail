@@ -1,4 +1,13 @@
 <div>
+    @if (session()->has('message'))
+        <div id="toast" class="toast">
+            <button onclick="closeToast(this)">
+                <div class="alert alert-success">
+                    <span>{{ session('message') }}.</span>
+                </div>
+            </button>
+        </div>
+    @endif
     <div class="card bg-base-100 w-100 shadow-xl">
         <div class="card-body">
             <h2 class="card-title">Produk</h2>
@@ -52,6 +61,17 @@
         function confirmDelete(id) {
             if (confirm('Apakah Anda yakin ingin menghapus item ini?')) {
                 @this.call('destroy', id);
+            }
+        }
+
+        function closeToast(button = null) {
+            const toast = document.getElementById('toast');
+            // Jika tombol Close yang ditekan, hilangkan hanya toast yang bersangkutan
+            if (button) {
+                button.closest('.toast').remove();
+            } else {
+                // Menghapus semua toast dalam container setelah timeout
+                toast.innerHTML = '';
             }
         }
     </script>

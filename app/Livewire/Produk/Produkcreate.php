@@ -25,6 +25,10 @@ class Produkcreate extends Component
             'harga' => $this->harga
         ]);
 
+        //flash message
+        session()->flash('message', 'Data Berhasil Disimpan.');
+
+        //redirect
         return $this->redirect('/produk', navigate: true);
     }
 

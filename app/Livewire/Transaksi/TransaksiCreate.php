@@ -73,6 +73,7 @@ class TransaksiCreate extends Component
             ]);
         }
 
+        session()->flash('message', 'Transaksi Berhasil Disimpan.');
         return $this->redirect('/transaksi', navigate: true);
     }
 
